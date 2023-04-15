@@ -18,4 +18,25 @@ Current DateTime = 15/04/2023 23:48:00
 moment().format(("{Date time format}"));
 ```
 
-Make sure to import the moment.js library and it's dependencies before running the code.
+*** Make sure to import the moment.js library and it's dependencies before running the code.
+
+# How to set text to json
+To set text to a JSON object,it need to create an object in JavaScript and assign values to its properties by using JSON.stringify() method.
+
+**Here is an example:**
+```javascript
+/ --- Set key parameter --- //
+var key = {}
+
+key.request_datetime = 'value';
+key.latest = true  
+
+// Convert text to JSON string
+let jsonString = JSON.stringify(key);
+console.log(jsonString);
+```
+
+**Output**
+```
+{"request_datetime":"value","latest":true}
+```
