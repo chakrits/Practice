@@ -1,4 +1,4 @@
-# How to set date format
+# How to set date format?
 
 Here is the code to set the date format using the moment.js library in JavaScript. The format of the date is set to "DD/MM/YYYY HH:mm:ss" which represents day/month/year hours:minutes:seconds. This code can be used in a pre-request script or test in tools like Postman to generate a timestamp or date stamp for requests or tests.
 
@@ -20,7 +20,7 @@ moment().format(("{Date time format}"));
 
 *** Make sure to import the moment.js library and it's dependencies before running the code.
 
-# How to set text to json
+# How to set text to json?
 To set text to a JSON object,it need to create an object in JavaScript and assign values to its properties by using JSON.stringify() method.
 
 **Here is an example:**
@@ -39,4 +39,11 @@ console.log(jsonString);
 **Output**
 ```
 {"request_datetime":"value","latest":true}
+```
+
+And convert JSON object to string
+
+```javascript
+let json = JSON.parse(jsonString);
+console.log(json);
 ```
