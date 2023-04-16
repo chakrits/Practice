@@ -47,3 +47,42 @@ And convert JSON object to string
 let json = JSON.parse(jsonString);
 console.log(json);
 ```
+
+# AES-128 Encryption & Decryption
+
+```javascript
+// Libary 
+var CryptoJS = require("crypto-js");
+
+// --- Function for AES-128 Encryption --- //
+function aesEncrypt (data,key) {
+   const iv = '';
+   const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key), {
+       iv: CryptoJS.enc.Utf8.parse(iv),
+       mode: CryptoJS.mode.CBC
+   });
+   return cipher.toString();
+}
+// --- End Function --- //
+
+ // --- Function for AES-128 Decryption --- //
+function aesDecrypt (encrypt,key) {
+    const iv = '';
+    const cipher = CryptoJS.AES.decrypt(encrypt, CryptoJS.enc.Utf8.parse(key), {
+        iv: CryptoJS.enc.Utf8.parse(iv),
+        mode: CryptoJS.mode.CBC
+    });
+ 
+    return CryptoJS.enc.Utf8.stringify(cipher);
+ }
+ // ---- End Function ---- //// Libary 
+```
+
+# Generate Random Numeber
+
+```javascript
+// for generating random number 
+function randomNumber(min, max) { 
+    return Math.random() * (max - min) + min;
+} 
+```
