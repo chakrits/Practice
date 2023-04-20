@@ -98,7 +98,7 @@ console.log("Base64: "+ encodedBase64);
 Base64: TXkgd29yZGluZw==
 ```
 
-# Generate Random Numeber
+# Generate Random Number
 
 ```javascript
 // for generating random number 
