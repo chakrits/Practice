@@ -56,10 +56,10 @@ var CryptoJS = require("crypto-js");
 
 // --- Function for AES-128 Encryption --- //
 function aesEncrypt (data,key) {
-   const iv = '';
+   const iv = '';            // No IV
    const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(key), {
        iv: CryptoJS.enc.Utf8.parse(iv),
-       mode: CryptoJS.mode.CBC
+       mode: CryptoJS.mode.CBC     //CBC mode
    });
    return cipher.toString();
 }
