@@ -31,9 +31,23 @@ And response might be as following:
 
  Although SOAP works over HTTP, SMTP, TCP, and UDP, it was primarily designed for use over HTTP. When SOAP is used over HTTP, the requests are all made using HTTP POST. For example, take a look at the following sample SOAP request:
 
+  ##### Anatomy of SOAP Message
+
+
+The examples in the above sections have already shown the format of SOAP API messages. In this section, you can better understand the few blocks of XML that SOAP requests contain. While it’s deliberately minimal (the “S” in SOAP stands for “simple,” after all), it provides the foundation for complex implementations.
+
+SOAP messages are constructed of up to four blocks:
+
+   - soap:**Envelope**
+   - soap:**Header**
+   - soap:**Body**
+   - soap:**ault**
+  
+Only soap:Envelope and soap:Body are required.
+
  Request example:
- ```xml
- POST /Inventory HTTP/1.1
+  ```xml
+  POST /Inventory HTTP/1.1
     Host: www.soap-shop.com
     Content-Type: application/soap+xml; charset=utf-8
     Content-Length: nnn
@@ -45,9 +59,9 @@ And response might be as following:
   </m:GetInventoryPrice>
 </soap:Body>
 </soap:Envelope>
-```
+ ```
  Resonse :
- ```xml
+  ```xml
 HTTP/1.1 200 OK
 Content-Type: application/soap+xml; charset=utf-8
 Content-Length: nnn
@@ -65,5 +79,4 @@ soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
     </soap:Fault>
 </soap:Body>
 </soap:Envelope>
- 
-```
+ ```
