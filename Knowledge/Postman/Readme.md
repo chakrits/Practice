@@ -13,9 +13,13 @@ console.log("Current DateTime = "+ cur_date);
 ```
 Current DateTime = 15/04/2023 23:48:00
 ```
+
 ###### Can change date format as by update 
 ```javascript
 moment().format(("{Date time format}"));
+
+// Add Next date from current date
+var next_date = moment().add(5, 'days').format(("YYYY-MM-DDTHH:mm:ss"));
 ```
 
 *** Make sure to import the moment.js library and it's dependencies before running the code.
