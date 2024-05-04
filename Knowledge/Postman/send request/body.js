@@ -13,3 +13,20 @@ pm.request.body.update({
     }
     ]
 });
+
+
+pm.request.body.update( 
+    {
+        mode: 'raw',
+        raw: JSON.stringify({
+            key: 'value1',
+            key2: 'value2'
+        }),
+        options: {
+            raw: {
+                language: 'json'
+            }
+        }
+    }
+)
+ 
