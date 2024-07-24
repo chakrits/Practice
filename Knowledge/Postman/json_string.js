@@ -16,3 +16,13 @@ key.latest = true                                           // Order by
 // --- End Set key parameter --- //
 var data = JSON.stringify(key)
 console.log(data);
+
+// Check Json String
+function isJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        console.log("Error is "+ e.message);
+    }
+    console.log("This is Json String");
+}
