@@ -1,0 +1,9 @@
+services:
+  web-app:
+    build: .
+    ports:
+      - "8080:5000"
+    container_name: my-compose-app
+    environment:
+      - USER_NAME=DevOps_Master
+      - APP_COLOR=lightblue
